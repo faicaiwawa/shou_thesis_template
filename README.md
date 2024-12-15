@@ -25,9 +25,6 @@ texcount -total  data/*.tex
 ## 参考资料
 
 - CTeX
-- 清华大学学位论文模版thuthesis
-- 南京大学学位论文模版NJUthesis
-- 中国科学技术大学学位论文模版ustcthesis
 - 杭州电子科技大学硕士学位论文模版hduthesis
 
 
