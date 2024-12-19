@@ -2,7 +2,11 @@
 
 该模板参考了往届信息学院毕业生的终稿格式和word版《上海海洋大学研究生学位论文格式排版》，预览请查看`SHOU_LaTeX_thesis_template.pdf`。
 
-overleaf在线编译请使用xelatex编译器
+**如使用overleaf在线编译，请在Menu中将编译器更换为xelatex。**
+
+**如使用overleaf在线编译，请在Menu中将编译器更换为xelatex。**
+
+**如使用overleaf在线编译，请在Menu中将编译器更换为xelatex。**
 
 本地编译推荐的编译命令为`latexmk -xelatex -synctex=1 main.tex`。
 `latexmk`命令的运行需要系统安装有Perl解释器。
