@@ -460,7 +460,11 @@
 % 中文摘要环境
 % ============================
 \newenvironment{abstract}{
-
+    % =================================
+    % 修复摘要部分页眉页脚
+    \thispagestyle{plain}
+    \pagestyle{plain}
+    % =================================    
     \chapter*{\centering\heiti\zihao{3}\selectfont{}这里是中文标题}
 \vspace{1em}
     {\centering\heiti\zihao{3}\selectfont{}摘~~~~要\par}
@@ -482,7 +486,11 @@
 % ============================
 \newenvironment{abstract*}{
     %\chapter*{\centering\rmfamily\bfseries\zihao{3}\selectfont ABSTRACT}%
-
+    % =================================
+    % 修复摘要部分页眉页脚
+    \thispagestyle{plain}
+    \pagestyle{plain}
+    % ================================= 
     \chapter*{\centering\heiti\zihao{3}\selectfont{}\textbf{HERE IS THE EN TITLE}}
 \vspace{1em}
     {\centering\heiti\zihao{3}\selectfont{}ABSTRACT\par}
