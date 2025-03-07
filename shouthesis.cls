@@ -90,11 +90,11 @@
 
 \geometry{
     paper      = a4paper,
-    vmargin    = 2.5cm,
-    hmargin    = 3cm,
-    headheight = 0.5cm,
-    headsep    = 0.37cm,
-    footskip   = 0.79cm, % 2.54 - 1.75
+    top    = 3.5cm,
+    bottom    = 2.5cm,
+    headheight = 2cm,
+    headsep    = 1cm,
+    footskip   = 0.35cm,
 }
 
 % =======================
@@ -460,19 +460,18 @@
 % 中文摘要环境
 % ============================
 \newenvironment{abstract}{
-    % =================================
-    % 修复摘要部分页眉页脚
-    \thispagestyle{plain}
+   \thispagestyle{plain}
     \pagestyle{plain}
-    % =================================    
-    \chapter*{\centering\heiti\zihao{3}\selectfont{}这里是中文标题}
-\vspace{1em}
+    \chapter*{\centering\heiti\zihao{3}\selectfont{这里是中文标题}}
+         \vspace{1.5em}
+
     {\centering\heiti\zihao{3}\selectfont{}摘~~~~要\par}
-    \vspace{1em}
+    \vspace{1.2em}
+
     \setcounter{page}{1}
    % \addcontentsline{toc}{chapter}{摘要}
     \songti\zihao{-4}
-    \setlength{\baselineskip}{20bp}
+    \linespread{1.3}\selectfont  % 将行距设置为1.3倍
     \selectfont
 }{
     \par\null\par\noindent\hangindent=4\ccwd\relax
@@ -484,28 +483,29 @@
 % ============================
 % 英文摘要环境
 % ============================
+
+
 \newenvironment{abstract*}{
     %\chapter*{\centering\rmfamily\bfseries\zihao{3}\selectfont ABSTRACT}%
-    % =================================
-    % 修复摘要部分页眉页脚
-    \thispagestyle{plain}
+   \thispagestyle{plain}
     \pagestyle{plain}
-    % ================================= 
     \chapter*{\centering\heiti\zihao{3}\selectfont{}\textbf{HERE IS THE EN TITLE}}
-\vspace{1em}
+
     {\centering\heiti\zihao{3}\selectfont{}ABSTRACT\par}
     \vspace{1em}
 
-    
     %\addcontentsline{toc}{chapter}{ABSTRACT}
     \rmfamily\zihao{-4}
-    \setlength{\baselineskip}{20bp}
+    \linespread{1.3}\selectfont  % 将行距设置为1.3倍
     \selectfont
 }{
     \par\null\par\noindent\hangindent=5.3em\relax
     \textbf{Keywords}: \shou@keywords@en\par
     \cleardoublepage
 }
+
+
+
 
 % ============================
 % 致谢环境
@@ -527,17 +527,17 @@
 % \titlecontents{标题名}[左间距]{标题格式}{标题标志}{无序号标题}{指引线与页码}[下间距]
 \titlecontents{chapter}
               [\z@]
-              {\songti\zihao{-4}\setlength{\baselineskip}{20bp}\selectfont}%
+              {\songti\zihao{-4}\linespread{1.3}\selectfont}%
               {\contentspush{\thecontentslabel\hspace{1em}}}{}
               {\titlerule*[4bp]{.}\thecontentspage}%
 \titlecontents{section}
               [\ccwd]
-              {\songti\zihao{-4}\setlength{\baselineskip}{20bp}\selectfont}
+              {\songti\zihao{-4}\linespread{1.3}\selectfont}
               {\contentspush{\thecontentslabel\hspace{1em}}}{}
               {\titlerule*[4bp]{.}\thecontentspage}%
 \titlecontents{subsection}
               [2\ccwd]
-              {\songti\zihao{-4}\setlength{\baselineskip}{20bp}\selectfont}
+              {\songti\zihao{-4}\linespread{1.3}\selectfont}
               {\contentspush{\thecontentslabel\hspace{1em}}}{}
               {\titlerule*[4bp]{.}\thecontentspage}%
 
@@ -562,21 +562,27 @@
 % 用 \pkg{ctex} 的接口设置全部章节标题格式。
 \ctexset{
     chapter = {
-        format      = \centering\heiti\zihao{3}\selectfont,
+        format      = \centering\bfseries\heiti\zihao{3}\selectfont,
         name = {第,章},
         number      = \arabic{chapter},
-        aftername   = \hspace{\ccwd},
-        beforeskip  = 2\baselineskip,
-        afterskip   = \baselineskip,
+         aftername   = \hspace{0.5em},
+        beforeskip  = 1\baselineskip,
+        afterskip   = 1\baselineskip,
         fixskip     = true,
     },
     section = {
         format     = \heiti\zihao{-3}\selectfont,
-        aftername  = \hspace{\ccwd},
+        aftername  = \hspace{0.5em},
+        beforeskip  = 1\baselineskip,
+        afterskip   = 1\baselineskip,
+        fixskip     = true,
     },
     subsection = {
         format     = \heiti\zihao{4}\selectfont,
-        aftername  = \hspace{\ccwd},
+         aftername  = \hspace{0.5em},
+        beforeskip  = 1\baselineskip,
+        afterskip   = 1\baselineskip,
+        fixskip     = true,
    },
 }
 
