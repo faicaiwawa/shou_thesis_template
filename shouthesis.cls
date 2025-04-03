@@ -110,8 +110,8 @@
 
 \fancypagestyle{cont}{
     \fancyhf{}
-    \fancyhead[C]{\songti \zihao{5} \selectfont 上海海洋大学硕士学位论文}%
-
+   \fancyhead[C]{\songti \zihao{5} \selectfont 上海海洋大学硕士学位论文}%
+}
 
 % =======================
 % 设置主要信息
